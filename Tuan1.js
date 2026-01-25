@@ -46,3 +46,10 @@ const totalInventoryValue = products.reduce((total, product) => {
 }, 0);
 
 console.log("\nCâu 7: Tổng giá trị kho hàng:", totalInventoryValue.toLocaleString('vi-VN') + " VNĐ");
+
+// Câu 8: Dùng for...of để duyệt mảng và in ra: Tên sản phẩm - Danh mục - Trạng thái
+console.log("\nCâu 8 - Duyệt mảng với for...of:");
+for (const product of products) {
+  const status = product.isAvailable ? "Còn hàng" : "Hết hàng";
+  console.log(`${product.name} - ${product.category} - ${status}`);
+}
