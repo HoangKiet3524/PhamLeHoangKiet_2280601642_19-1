@@ -33,3 +33,9 @@ console.log(inStockProducts);
 // Câu 5: Kiểm tra xem có ít nhất một sản phẩm có giá trên 30.000.000 hay không
 const hasExpensiveProduct = products.some(product => product.price > 30000000);
 console.log(hasExpensiveProduct);
+
+// Câu 6: Kiểm tra xem tất cả sản phẩm thuộc danh mục "Accessories" có đang được bán (isAvailable = true) hay không
+const allAccessoriesAvailable = products
+  .filter(product => product.category === "Accessories")
+  .every(product => product.isAvailable === true);
+console.log(allAccessoriesAvailable);
