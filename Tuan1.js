@@ -29,3 +29,7 @@ console.log(productNamePrice);
 // Câu 4: Lọc ra các sản phẩm còn hàng trong kho (quantity > 0)
 const inStockProducts = products.filter(product => product.quantity > 0);
 console.log(inStockProducts);
+
+// Câu 5: Kiểm tra xem có ít nhất một sản phẩm có giá trên 30.000.000 hay không
+const hasExpensiveProduct = products.some(product => product.price > 30000000);
+console.log(hasExpensiveProduct);
