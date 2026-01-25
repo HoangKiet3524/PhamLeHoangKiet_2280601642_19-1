@@ -53,3 +53,10 @@ for (const product of products) {
   const status = product.isAvailable ? "Còn hàng" : "Hết hàng";
   console.log(`${product.name} - ${product.category} - ${status}`);
 }
+
+// Câu 9: Dùng for...in để in ra tên thuộc tính và giá trị tương ứng
+console.log("\nCâu 9 - Duyệt thuộc tính với for...in:");
+const sampleProduct = products[5];
+for (const key in sampleProduct) {
+  console.log(`${key}: ${sampleProduct[key]}`);
+}
