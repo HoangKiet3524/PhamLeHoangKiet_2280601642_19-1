@@ -39,3 +39,10 @@ const allAccessoriesAvailable = products
   .filter(product => product.category === "Accessories")
   .every(product => product.isAvailable === true);
 console.log(allAccessoriesAvailable);
+
+// Câu 7: Tính tổng giá trị kho hàng (price × quantity)
+const totalInventoryValue = products.reduce((total, product) => {
+  return total + (product.price * product.quantity);
+}, 0);
+
+console.log("\nCâu 7: Tổng giá trị kho hàng:", totalInventoryValue.toLocaleString('vi-VN') + " VNĐ");
