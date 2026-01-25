@@ -18,3 +18,10 @@ const products = [
   new Product(6, "Tai nghe AirPods", 5500000, 0, "Accessories", true),
   new Product(7, "Ốp lưng điện thoại", 50000, 100, "Accessories", true),
 ];
+
+// Câu 3: Tạo mảng mới chỉ chứa name, price của mỗi sản phẩm
+const productNamePrice = products.map(product => ({
+    name: product.name,
+    price: product.price
+}));
+console.log(productNamePrice);
