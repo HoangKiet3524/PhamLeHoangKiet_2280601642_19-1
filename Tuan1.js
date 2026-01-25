@@ -60,3 +60,11 @@ const sampleProduct = products[5];
 for (const key in sampleProduct) {
   console.log(`${key}: ${sampleProduct[key]}`);
 }
+
+// Câu 10: Lấy danh sách tên các sản phẩm đang bán và còn hàng
+const availableProductNames = products
+  .filter(product => product.isAvailable && product.quantity > 0)
+  .map(product => product.name);
+
+console.log("\nCâu 10 - Sản phẩm đang bán và còn hàng:");
+console.log(availableProductNames);
