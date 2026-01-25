@@ -25,3 +25,7 @@ const productNamePrice = products.map(product => ({
     price: product.price
 }));
 console.log(productNamePrice);
+
+// Câu 4: Lọc ra các sản phẩm còn hàng trong kho (quantity > 0)
+const inStockProducts = products.filter(product => product.quantity > 0);
+console.log(inStockProducts);
